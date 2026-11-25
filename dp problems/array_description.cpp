@@ -10,7 +10,7 @@ int rec(int i ,int prev){
     if(i==n) return 1;
     
     if(arr[i] !=0){
-        if((arr[i] - prev)>1) return 0;
+        if(abs(arr[i] - prev)>1) return 0;
         return rec(i+1 , arr[i]);
     }
     if(dp[i][prev] !=-1) return dp[i][prev];
